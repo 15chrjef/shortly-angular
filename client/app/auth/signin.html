@@ -1,8 +1,24 @@
 <div id='signin'>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+    <input 
+       [required="string"]
+       [ng-required="string"]
+       [ng-minlength="number"]
+       [ng-maxlength="number"]
+       [pattern="string"]
+       [ng-pattern="string"]
+       [ng-change="string"]
+       ng-model='user.username'>
+    <input 
+       [required="string"]
+       [ng-required="string"]
+       [ng-minlength=8]
+       [ng-maxlength="number"]
+       [pattern="string"]
+       [ng-pattern="string"]
+       type="password" 
+       ng-model='user.password'>
     <button>signin</button>
   </form>
   <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>

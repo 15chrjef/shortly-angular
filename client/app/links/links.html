@@ -1,3 +1,10 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller='LinksController'>
+  <h1>Links</h1>
+  <div ng-repeat="link in data.links">
+    <a href='{{link.url}}' ng-click="link.visits = link.visits + 1"> 
+      <div>TITLE: {{link.title}}</div> 
+      <div>LINK: {{link.url}}</div> 
+      <div>COUNT: {{link.visits}}</div>
+    </a>
+  </div>
 </div>
